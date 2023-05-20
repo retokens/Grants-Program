@@ -72,21 +72,90 @@ dematerialize the due diligence process in other areas,
 such as valuation.
 
 ## Deliverables :nut_and_bolt:
+The PCP in its current form should be able to support the addition of the due diligence 
+document(s) listed below.
 
-Please list the deliverables of the project in as much detail as possible. Please also estimate the amount of work required and try to divide the project into meaningful milestones.
+There are additional steps that could be made but this would require discussion 
+and cost/benefit analysis.
 
-* **Total Estimated Duration:** Duration of the whole project
-* **Full-time equivalent (FTE):**  Amount of time (in days) required for a single person to complete this project ([see](https://en.wikipedia.org/wiki/Full-time_equivalent)) 
-* **Total Costs:** Amount of Payment in USD for the whole project. 
-### Milestone 1
+Therefore, unless further analysis is needed based on the remainder of this section, 
+there are no concrete deliverables for this project.
 
-Please add additional milestones in the same way: 
-* **Estimated Duration:** Duration of milestone 1 
-* **FTE:**  Amount of time (in days) required for a single person to complete this milestone
-* **Costs:** Amount of Payment in USD for milestone 1
+***Title Report***
 
+The simplest most effective way for an issuer to prove ownership 
+and existence of a RE STO backing property is to 
+property's Title Report ([see](https://www.fortunebuilders.com/what-is-title-report/))
 
-| Number | Deliverable | Specification | 
-| ------------- | ------------- | ------------- |
-| 1. | Title of the deliverable | Please describe the deliverable here as detailed as possible |  
-| 2.  | ... |...| 
+A Title Report checks the important boxes related to preventing property fraud, providing practically
+all the necessary due diligence related to the issues of property existence and ownership:
+
+* **Legal Description** 
+* **Parcel Number**
+* **Owner**
+* **Lien Holders**
+* **Encumbrances**
+* **Easements**
+* **Title Claims due to Mortgage or Debt**
+
+***Title Report as Asset Document Reference***
+
+There are two ways to make the Title Report available to potential investors.
+
+The first is as an Asset Document, as seen here ([see](./AssetDocumentExample.png)).
+
+This is the simplest approach and can be applied to any type of documentation which 
+improves the veracity property documentation.
+
+The issuer would add the Title Report reference via a signed transaction which would 
+impose non-repudiation on the issuer which would give them pause if their intention was fraud.
+
+The potential investor would need to click the 'document' link to view the 
+real Title Report in a browser as is done now or, alternatively, in a custom viewer.
+
+***Title Report as On-chain as part of the Asset***
+
+The second way is to the store the Title Report On-chain as part of the RE STO Asset. 
+
+The necessity of this is questionable and would add complexity and cost.
+
+**On-Chain Versioning**
+
+A closer Cost/Benefit analysis would need to be done, but one obvious benefit would be
+that the Asset would have a 'content-management' or 'source-control' versioning of the 
+due diligence documents associated with it which would make fraud easy to prove and, thereby, 
+give more pause to a bad actor.
+
+Versioning is difficult with off-chain references, unless the documents 
+were persisted in an immutable store which seems like a difficult requirement to enforce without
+supporting storage infrastructure or application process support. 
+But, in light of the consequences of fraud, this may be an approach to consider as the infrastructure 
+or process support could be lightweight.
+
+***Document Hash***
+Regardless of whether the documentation is stored as
+a reference or on-chain. 
+The document's cryptographic hash must be persisted as well as it is the Hash
+which gives the potential investor the guaranteed of document integrity. Without the hash, 
+the document could be swapped out for another or modified.
+
+Generating a hash for a document might be an area where work needs to be done since the average 
+issuer would probably not know how to do that.
+
+***Digital Signature***
+When a document is 'added' to the Asset (as reference or on-chain data) and a hash is included,
+the issuer signs the transaction. At that moment, the issuer is effectively 
+making a digitally signed claim about the existence and integrity of 
+the document which cannot be repudiated.
+
+Making false claims and/or submitting falsified or misleading documentation 
+about a digital security and not being able to repudiate the act should 
+be a powerful disincentive to bad actors hoping to commit fraud.
+
+* **Total Estimated Duration:** TBD
+* **Full-time equivalent (FTE):**  TBD 
+
+### Milestones
+There are no milestones at this time.
+
+Discussion regarding this proposal need to take place before milestones are declared.
