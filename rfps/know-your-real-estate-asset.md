@@ -150,7 +150,17 @@ the document which cannot be repudiated.
 
 Making false claims and/or submitting falsified or misleading documentation 
 about a digital security and not being able to repudiate the act should 
-be a powerful disincentive to bad actors hoping to commit fraud.
+be a powerful deterrent to bad actors hoping to commit fraud.
+
+***Folder Structures and Templates***
+Including Folder Structures in the PCP could improve Asset documentation organization 
+as compared to the flat structure in place today.
+
+For example, a **Due Diligence** folder would allow issuers to put documentation into a single location and 
+give potential investors a single location to look for due diligence information.
+
+Folder templates **per Asset Type** could be defined and applied during Asset initialization, giving 
+issuers and potential investors visual triggers to what should be included and where to find it.
 
 * **Total Estimated Duration:** TBD
 * **Full-time equivalent (FTE):**  TBD 
