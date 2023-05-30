@@ -2,9 +2,9 @@
 
 * **Status:** Open (anyone is allowed to apply) / Closed (invited respondents only) / Implemented (finished)
 * **Proposer:** REtokens.com
-* **Your Project(s):** [optional]: Link(s)
+* **Your Project(s):** [optional]: REtokens.com
 * **Projects you think this work could be useful for** [optional]: Polymath Capital Platform
-* **Teams/People that could deliver the RFP** [optional]: Link(s)
+* **Teams/People that could deliver the RFP** [optional]: REtokens.com
 
 ## Project Description :page_facing_up: 
 
@@ -24,7 +24,7 @@ as much as possible in order to protect the integrity of the PCP and the
 interests of its investors in Real-estate backed Security Tokens (RE STOs).
 
 Note: On one hand, we have limited the scope of this project to fraud prevention for 
-RE STOs only.
+RE STOs.
 On the other hand, we presume that the approach
 taken here will apply equally well to non-RE STOs, with some adjustments.
 Our thinking is to focus on the single problem of RE STO fraud prevention and achieve it,
@@ -38,6 +38,7 @@ the scope of this project is limited to preventing issuance of a RE STO:
 - with non-existent backing property
 - with a backing property which is not 'owned' by the issuer
 
+We do not address RE STO valuation.
 
 **Objectives**
 
@@ -50,11 +51,10 @@ made available via the PCP.
 Therefore, the objectives of this project are:
 
 - to define which documents best serve guaranteeing RE STO veracity.
-
-- to make it simple and cost-effective for issuers to demonstrate veracity of RE STO documentation
+- to make it simple and cost-effective for issuers to 
+demonstrate veracity of RE STO documentation
 - to ensure potential investors can easily and confidently perform 
 due diligence on the veracity of the backing property
-
 - to define and implement a technical process for 
 storing or referencing documentation from the PCP in a manner which guarantees documentation integrity via hashing and issuer non-repudiation via digital signature.
 
@@ -78,8 +78,8 @@ document URLs to centralized or decentralized storage.
 Ease and confidence can accelerate word-of-mouth promotion 
 which will drive network effect adoption of the PCP.
 
-Consequently, readily accessible, high veracity due diligence documentation via the PCP 
-will greatly dematerialize the due diligence process in other areas as well, 
+Consequently, as a downstream side-benefit, readily accessible, high veracity due diligence documentation via the PCP 
+will greatly dematerialize the due diligence process and its costs in other areas as well, 
 such as determining RE STO valuation.
 
 ## Deliverables :nut_and_bolt:
@@ -108,7 +108,7 @@ make document integrity or corruption obvious to anyone looking at the document.
  
 If none of the above development areas are deemed necessary, 
 then this proposal includes no specific concrete deliverables as it is currently
-possible to attach document references to RE STOs.
+possible to attach document references to RE STOs via the PCP.
 
 ***Title Report***
 
