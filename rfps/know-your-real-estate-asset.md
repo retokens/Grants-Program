@@ -20,19 +20,17 @@ Polymath Capital Platform (PCP) could have long-term,
 devastating consequences for the PCP and it's ability to attract asset issuers and investors.
 
 The purpose of the Know Your Real-estate Asset project is to reduce the potential of fraud 
-as much as possible in order to protect the integrity of the PCP and the interests of its investors in RE STOs.
+as much as possible in order to protect the integrity of the PCP and the
+interests of its investors in Real-estate backed Security Tokens (RE STOs).
 
 Note: On one hand, we have limited the scope of this project to fraud prevention for 
-real-estate backed STOs (RE STOs) only.
+RE STOs only.
 On the other hand, we presume that the approach
 taken here will apply equally well to non-RE STOs, with some adjustments.
 Our thinking is to focus on the single problem of RE STO fraud prevention and achieve it,
-rather than the universal problem of fraud prevention, and later apply it to other types of STOs.
+rather than the universal problem of fraud prevention. Later, we can apply a similar approach 
+to other types of STOs.
 
-While real estate fraud in the physical or digital world cannot be prevented entirely, 
-it is REtokens' position 
-that the threat of fraud can be greatly reduced by increasing the veracity of RE STOs documentation
-traditional documentation made available via the PCP.
 
 And while there are different types of RE STO fraud a perpetrator could commit, 
 the scope of this project is limited to preventing issuance of a RE STO:
@@ -40,50 +38,74 @@ the scope of this project is limited to preventing issuance of a RE STO:
 - with non-existent backing property
 - with a backing property which is not 'owned' by the issuer
 
+
 **Objectives**
 
-The objectives of this project are:
+While real estate fraud in the physical or digital world cannot be prevented entirely,
+it is REtokens' position
+that the threat of fraud can be greatly reduced
+by increasing the veracity of RE STOs documentation
+made available via the PCP.
+
+Therefore, the objectives of this project are:
 
 - to define which documents best serve guaranteeing RE STO veracity.
 
-- to make it simple and cost-effective for issuers to demonstrate RE STO veracity.
+- to make it simple and cost-effective for issuers to demonstrate veracity of RE STO documentation
+- to ensure potential investors can easily and confidently perform 
+due diligence on the veracity of the backing property
 
-- to ensure potential investors can perform due diligence on the veracity of the backing property easily and with confidence
-
-- to define and implement a technical process for storing or referencing documentation from the PCP in a manner which guarantees documentation integrity via hashing and issuer non-repudiation via digital signature.
+- to define and implement a technical process for 
+storing or referencing documentation from the PCP in a manner which guarantees documentation integrity via hashing and issuer non-repudiation via digital signature.
 
 **Impact**
 
-The impact of this project will be to make it easier for potential investors to recognize RE STOs which are fraudulent as related to their existence or ownership.
+The impact of this project will be to make it easier for 
+potential investors to recognize RE STOs 
+which are fraudulent as related to their existence or ownership.
 
-The ultimate effect will be to discourage and prevent issuance of fraudulent RE STOs in the first place.
+The ultimate effect will be to discourage, if not prevent, issuance of 
+fraudulent RE STOs in the first place.
 
 **Expected Outcomes**
 
-An outcome of this project is enabling 
+An outcome of this project is to enable 
 potential investors to access conclusive RE STO 
-due diligence documentation fast and with confidence 
-directly or indirectly from the blockchain. 
-This can accelerate word-of-mouth promotion which will drive network effect adoption.
+due diligence documentation easily and with confidence, either 
+directly on the blockchain or indirectly via 
+document URLs to centralized or decentralized storage. 
 
-This storage, as well, of other due diligence 
-documents and/or references on-chain will greatly 
-dematerialize the due diligence process in other areas, 
-such as valuation.
+Ease and confidence can accelerate word-of-mouth promotion 
+which will drive network effect adoption of the PCP.
+
+Consequently, readily accessible, high veracity due diligence documentation via the PCP 
+will greatly dematerialize the due diligence process in other areas as well, 
+such as determining RE STO valuation.
 
 ## Deliverables :nut_and_bolt:
 The PCP in its current form should be able to support the addition of the due diligence 
 document(s) listed below.
 
-There are additional steps that could be made but this would require discussion 
-and cost/benefit analysis.
+There are additional steps that could be taken but this would require a pros and cons
+discussion with the PCP team as well as a cost/benefit analysis.
 
-Therefore, unless further analysis is needed based on the remainder of this section, 
-there are no concrete deliverables for this project.
+Some ideas are:
+
+ - storage on the blockchain, linked to the RE STO
+ - PCP extension application to help issuers publish documentation to Polymesh or external
+storage
+ - PCP tools or utilities to enable automatic inclusion of
+document hashes and digital signatures to ensure document integrity and issuer non-repudiation
+ - taxonomy definition for RE STOs documentation sets
+(as a basis for other STO-type documentation sets)
+
+Therefore, unless further analysis is needed, and based on the remainder of this section, 
+there are no concrete deliverables for this project as it is believed that the PCP
+as is can support the 'attachment' of documentation the issued RE STO.
 
 ***Title Report***
 
-The simplest most effective way for an issuer to prove ownership 
+The position of RETokens is that the simplest, most effective way for an issuer to prove ownership 
 and existence of a RE STO backing property is to 
 property's Title Report ([see](https://www.fortunebuilders.com/what-is-title-report/))
 
