@@ -105,12 +105,13 @@ as is can support the 'attachment' of documentation the issued RE STO.
 
 ***Title Report***
 
-The position of RETokens is that the simplest, most effective way for an issuer to prove ownership 
-and existence of a RE STO backing property is to 
+RETokens believes that the simplest, most effective way for an issuer to prove existence and
+ownership of an RE STO backing property is to attach to the RE STO the 
 property's Title Report ([see](https://www.fortunebuilders.com/what-is-title-report/))
 
-A Title Report checks the important boxes related to preventing property fraud, providing practically
-all the necessary due diligence related to the issues of property existence and ownership:
+A Title Report checks 'all the important boxes' related to preventing property fraud
+by providing practically
+all the necessary due diligence related to proving the property existence and issuer ownership:
 
 * **Legal Description** 
 * **Parcel Number**
@@ -127,13 +128,14 @@ There are two ways to make the Title Report available to potential investors.
 The first is as an Asset Document, as seen here ([see](./AssetDocumentExample.png)).
 
 This is the simplest approach and can be applied to any type of documentation which 
-improves the veracity property documentation.
+improves the veracity of property documentation.
 
-The issuer would add the Title Report reference via a signed transaction which would 
-impose non-repudiation on the issuer which would give them pause if their intention was fraud.
+The issuer would add the **Title Report** reference via a signed transaction which would 
+impose non-repudiation on the issuer, 
+a fact which would give them pause if their intention were fraud.
 
 The potential investor would need to click the 'document' link to view the 
-real Title Report in a browser as is done now or, alternatively, in a custom viewer.
+real **Title Report** in a browser as is done now or, alternatively, in a custom viewer.
 
 ***Title Report as On-chain as part of the Asset***
 
