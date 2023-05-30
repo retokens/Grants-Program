@@ -86,32 +86,41 @@ such as determining RE STO valuation.
 The PCP in its current form should be able to support the addition of the due diligence 
 document(s) listed below.
 
-There are additional steps that could be taken but this would require a pros and cons
-discussion with the PCP team as well as a cost/benefit analysis.
+There are additional development areas that could be taken but this would require discussions
+with the PCP team including pros and cons assessment and cost/benefit analysis.
 
-Some ideas are:
+Potential development areas include:
 
- - storage on the blockchain, linked to the RE STO
- - PCP extension application to help issuers publish documentation to Polymesh or external
-storage
- - PCP tools or utilities to enable automatic inclusion of
-document hashes and digital signatures to ensure document integrity and issuer non-repudiation
- - taxonomy definition for RE STOs documentation sets
-(as a basis for other STO-type documentation sets)
-
-Therefore, unless further analysis is needed, and based on the remainder of this section, 
-there are no concrete deliverables for this project as it is believed that the PCP
-as is can support the 'attachment' of documentation the issued RE STO.
+ - a PCP tool, utility, UI extension or API to
+   - help issuers publish documentation to
+     centralized off-chain storage service or direct on the blockchain
+   - generate a hash or validate a provided
+hash when a document URL is added to the RE STO's documentation set (the Polkadot.js API has
+   a limitation in that it 'accepts'
+a 'contentHash' argument but does not validate it
+(as can be seen in polymesh-sdk-examples/src/examples/createToken.ts)
+   - Include a digital signature to each document 
+   to impose a more visible enforcement of issuer non-repudiation
+ - define a PCP-visible taxonomy for RE STOs documentation sets (later, this approach
+could be adapted to other STO-type documentation sets)
+ - custom document viewer which would include a 'hash validation' step. The viewer could
+make document integrity or corruption obvious to anyone looking at the document.
+ 
+If none of the above development areas are deemed necessary, 
+then this proposal includes no specific concrete deliverables as it is currently
+possible to attach document references to RE STOs.
 
 ***Title Report***
 
 RETokens believes that the simplest, most effective way for an issuer to prove existence and
-ownership of an RE STO backing property is to attach to the RE STO the 
-property's Title Report ([see](https://www.fortunebuilders.com/what-is-title-report/))
+ownership of an RE STO backing property is to attach a reference to the 
+property's Title Report to the RE STO ([see](https://www.fortunebuilders.com/what-is-title-report/))
 
-A Title Report checks 'all the important boxes' related to preventing property fraud
+This is because the Title Report checks 'all the important boxes' relevant 
+to preventing property fraud
 by providing practically
-all the necessary due diligence related to proving the property existence and issuer ownership:
+all the necessary due diligence information 
+to proving the property existence, the issuer ownership and title quality:
 
 * **Legal Description** 
 * **Parcel Number**
@@ -121,69 +130,62 @@ all the necessary due diligence related to proving the property existence and is
 * **Easements**
 * **Title Claims due to Mortgage or Debt**
 
-***Title Report as Asset Document Reference***
+***Title Report as Document Reference***
 
 There are two ways to make the Title Report available to potential investors.
 
-The first is as an Asset Document, as seen here ([see](./AssetDocumentExample.png)).
+The first is to attach a reference to an externally **Title Reportt** to the RE STO, 
+as seen in this screenshot ([see](./AssetDocumentExample.png)). Presumably, this is done 
+via the Polkadot.js API, but as is mentioned above, there is a limitation when using this API 
+in that it neither generates a document hash nor validates the hash provided to the API.
 
 This is the simplest approach and can be applied to any type of documentation which 
 improves the veracity of property documentation.
 
-The issuer would add the **Title Report** reference via a signed transaction which would 
-impose non-repudiation on the issuer, 
-a fact which would give them pause if their intention were fraud.
+The issuer would add the **Title Report** reference via a signed transaction. 
+The signed transaction
+would create a de facto digital signature for the referenced document submission and, thereby, 
+impose non-repudiation on the issuer: non-repudiation of a fraudulent document to a RE STO wouild 
+give serious pause to any potential fraudster.
 
-The potential investor would need to click the 'document' link to view the 
-real **Title Report** in a browser as is done now or, alternatively, in a custom viewer.
+For a potential investor to view the document, 
+they would click the 'document' link to view the 
+referenced **Title Report** in a browser as is done now or, alternatively, in a custom viewer which could
+provide a hash-based integrity check.
 
-***Title Report as On-chain as part of the Asset***
+***Title Report Stored (and Versioned) On-chain***
 
-The second way is to the store the Title Report On-chain as part of the RE STO Asset. 
+The second way is to the store the Title Report On-chain and linked to the RE STO. 
 
-The necessity of this is questionable and would add complexity and cost.
+The desirability of this approach should be questioned because it would add bloat, 
+complexity and cost to the Polymesh blockchain.
 
-**On-Chain Versioning**
+However, if on-chain document storage were limited to only the **Title Report** 
+there is the downstream benefit of **On-Chain Versioning** that may be worth the cost.
 
-A closer Cost/Benefit analysis would need to be done, but one obvious benefit would be
-that the Asset would have a 'content-management' or 'source-control' versioning of the 
-due diligence documents associated with it which would make fraud easy to prove and, thereby, 
-give more pause to a bad actor.
+On-chain document storage provides an out-of-the-box 
+'content-management' type of audit trail, making the act of submitting a fraudulent 
+**Title Report** more threatening to a fraudster due to its on-chain, immutable provability.
 
-Versioning is difficult with off-chain references, unless the documents 
-were persisted in an immutable store which seems like a difficult requirement to enforce without
+In contrast, provability is difficult to achieve with an off-chain 
+**Title Report** reference, unless it was
+persisted in an immutable store. Making immutable storage seems like a difficult 
+requirement to enforce without
 supporting storage infrastructure or application process support. 
-But, in light of the consequences of fraud, this may be an approach to consider as the infrastructure 
-or process support could be lightweight.
+Therefore, in light of value of preventing fraud, on-chain storage or off-chain immutable storage
+may be an approaches to consider as the infrastructure or 
+process support could be relatively lightweight to create or already existing.
 
-***Document Hash***
-Regardless of whether the documentation is stored as
-a reference or on-chain. 
-The document's cryptographic hash must be persisted as well as it is the Hash
-which gives the potential investor the guaranteed of document integrity. Without the hash, 
-the document could be swapped out for another or modified.
+***Taxonomy Folder Structures and Templates***
+as compared to the flat file structure in place today,
+including Taxonomy Folder Structures in the PCP could improve RE STO documentation organization.
 
-Generating a hash for a document might be an area where work needs to be done since the average 
-issuer would probably not know how to do that.
-
-***Digital Signature***
-When a document is 'added' to the Asset (as reference or on-chain data) and a hash is included,
-the issuer signs the transaction. At that moment, the issuer is effectively 
-making a digitally signed claim about the existence and integrity of 
-the document which cannot be repudiated.
-
-Making false claims and/or submitting falsified or misleading documentation 
-about a digital security and not being able to repudiate the act should 
-be a powerful deterrent to bad actors hoping to commit fraud.
-
-***Folder Structures and Templates***
-Including Folder Structures in the PCP could improve Asset documentation organization 
-as compared to the flat structure in place today.
-
-For example, a **Due Diligence** folder would allow issuers to put documentation into a single location and 
+For example, a **Due Diligence** folder would allow issuers to put 
+due diligence documentation into a single location. This kind of organization would 
 give potential investors a single location to look for due diligence information.
 
-Folder templates **per Asset Type** could be defined and applied during Asset initialization, giving 
+Folder templates **per Asset Type** could be defined and 
+applied during Asset initialization/issuance, giving 
 issuers and potential investors visual triggers to what should be included and where to find it.
 
 * **Total Estimated Duration:** TBD
